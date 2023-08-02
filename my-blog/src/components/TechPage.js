@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet, Link } from 'react-router-dom';
-// 중첩된 라우팅을 구성하기 위해 Outlet컴포넌트 사용!
+// 중첩된 라우팅(Nested Routes)을 구성하기 위해 Outlet컴포넌트 사용!
 
 export default function TechPage() {
   return (
