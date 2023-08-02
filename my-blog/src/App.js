@@ -6,6 +6,8 @@ import JavascriptPage from "./components/JavascriptPage";
 import ReactPage from "./components/ReactPage";
 import ReactDocPage from "./components/ReactDocPage";
 
+import HeaderLogo from "./components/HeaderLogo";
+
 function App() {
 
   // root url: main page component
@@ -13,17 +15,20 @@ function App() {
   // blog url: blog page component
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path={"/"} element={<MainPage />} />
 
-        <Route path={"/tech"} element={<TechPage />}>
-          <Route path="javascript" element={<JavascriptPage />} />
-          <Route path="react" element={<ReactPage />}></Route>
-          <Route path="react/:docId" element={<ReactDocPage />} />
-        </Route>
+      <HeaderLogo />
+      
+        <Routes>
+          <Route path={"/"} element={<MainPage />} />
 
-        <Route path={"/blog"} element={<BlogPage />}></Route>
-      </Routes>
+          <Route path={"/tech"} element={<TechPage />}>
+            <Route path="javascript" element={<JavascriptPage />} />
+            <Route path="react" element={<ReactPage />}></Route>
+            <Route path="react/:docId" element={<ReactDocPage />} />
+          </Route>
+
+          <Route path={"/blog"} element={<BlogPage />}></Route>
+        </Routes>
     </BrowserRouter>
   );
 }
