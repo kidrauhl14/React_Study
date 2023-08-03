@@ -20,7 +20,7 @@ https://reactrouter.com/en/6.14.2/start/overview
 2. async await
 3. fetch API (https://jsonplaceholder.typicode.com/guide/)
 4. axios: fetch보다 axios라이브러리가 더 흔하게 많이 쓰인다. 이전에 fetch로 짠 코드를, axios로 바꿔보자!<br>(https://axios-http.com/kr/docs/intro)
-5. useEffect 내에서 API호출 시, 주의할 점
+5. useEffect 내에서 API호출 시, 주의할 점 (useEffect의 함수는, promise를 반환하면 안된다)
 6. Custom Hook
 7. useFetch
 8. swr과 React-Query
