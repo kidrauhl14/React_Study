@@ -18,7 +18,7 @@ https://reactrouter.com/en/6.14.2/start/overview
 ### 비동기 프로그래밍과 API호출
 1. 비동기 프로그래밍과 Promise
 2. async await
-3. fetch API
+3. fetch API (https://jsonplaceholder.typicode.com/guide/)
 4. axios
 5. useEffect 내에서 API호출 시, 주의할 점
 6. Custom Hook
