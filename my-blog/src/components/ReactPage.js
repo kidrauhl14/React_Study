@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import axios from 'axios';
 
 function ReactPage() {
   // api call -> react에 해당하는 글의 목록을 응답받기
@@ -35,14 +36,15 @@ function ReactPage() {
   //   },
   // ];
 
+  // useEffect의 함수는, promise를 반환하면 안된다 
   useEffect(() => {
     // async를 붙인 함수를 호출하면, 결과는 항상 promise다!
     async function fetchData() {
-      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-      const result = await res.json();
-      console.log(result); // 상태값
+      const result = await axios.get("https://jsonplaceholder.typicode.com/posts");
+      // const result = await res.json();
+      console.log(result.data); // 상태값
       // setDocs(result);
-      return result;
+      return result.data;
     }
     fetchData().then((res) => {
       setDocs(res);
